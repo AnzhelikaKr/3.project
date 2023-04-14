@@ -59,6 +59,8 @@ public class Main {
 
 	public static void comp(String sourceFile, String resultFile) {
 		// TODO: implement this method
+		LZ77 lz= new LZ77(sourceFile, resultFile);
+		lz.compress();
 	}
 
 	public static void decomp(String sourceFile, String resultFile) {
@@ -115,6 +117,30 @@ public class Main {
 		// TODO insert information about authors
 		System.out.println("000RDB000 Jānis Programmētājs");
 		System.out.println("111RDB111 Ilze Programmētāja");
+	}
+}
+
+class LZ77{
+	private String sourceFile, resultFile;
+	
+	public LZ77(String sf, String rf) {
+		String sourceFile=sf;
+		String resultFile=rf;
+		System.out.println("Inicialised");
+		
+	}
+	public static void compress() {
+		System.out.println("compressing");
+		match(2,3);
+	}
+	
+	public static void decompress() {
+		System.out.println("compressing");
+		match(2,3);
+	}
+	private static boolean match(int a, int b) {
+		System.out.println(a==b);
+		return true;
 	}
 }
 
